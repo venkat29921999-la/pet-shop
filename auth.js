@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js-ready');
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ===== SCROLL REVEAL (auth cards) ===== */
@@ -40,27 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ===== USER STORE HELPERS ===== */
-  function getUsers() {
-    try {
-      return JSON.parse(localStorage.getItem('pawfetch_users')) || [];
-    } catch { return []; }
-  }
-  function saveUsers(users) {
-    localStorage.setItem('pawfetch_users', JSON.stringify(users));
-  }
-
-  /* Seed a default admin + user so login works out of the box */
-  (function seedDefaults() {
-    const users = getUsers();
-    if (!users.length) {
-      saveUsers([
-        { name: 'Admin', email: 'admin@pawfetch.com', phone: '0000000000', password: 'admin123', role: 'admin' },
-        { name: 'Demo User', email: 'user@pawfetch.com', phone: '0000000000', password: 'user123', role: 'user' }
-      ]);
-    }
-  })();
-
   /* ===== PASSWORD STRENGTH (signup) ===== */
   const signupPassword = document.getElementById('signup-password');
   const strengthBars = document.querySelectorAll('#pass-strength span');
@@ -78,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ===== SIGNUP FORM ===== */
+  /* ===== SIGNUP FORM (no storage — just a friendly confirmation, then to Login) ===== */
   const signupForm = document.getElementById('signup-form');
   const signupNote = document.getElementById('signup-note');
 
@@ -86,9 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
     signupForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const name = document.getElementById('signup-name').value.trim();
-      const email = document.getElementById('signup-email').value.trim().toLowerCase();
-      const phone = document.getElementById('signup-phone').value.trim();
       const password = document.getElementById('signup-password').value;
       const confirm = document.getElementById('signup-confirm').value;
       const role = document.getElementById('signup-role').value;
@@ -102,14 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (password !== confirm) return showError('Passwords do not match.');
       if (!agreed) return showError('Please agree to the Terms & Privacy Policy.');
 
-      const users = getUsers();
-      if (users.some(u => u.email === email)) {
-        return showError('An account with this email already exists.');
-      }
-
-      users.push({ name, email, phone, password, role });
-      saveUsers(users);
-
       signupNote.textContent = `Account created as ${role === 'admin' ? 'Admin' : 'User'}! Redirecting to login... 🐾`;
       signupNote.className = 'auth-note success';
 
@@ -117,7 +87,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ===== LOGIN FORM ===== */
+  /* =====================================================================
+     LOGIN FORM
+     No account lookup, no localStorage — any email/password combo works.
+     The selected role (User / Admin) decides which dashboard you land on.
+  ===================================================================== */
   const loginForm = document.getElementById('login-form');
   const loginNote = document.getElementById('login-note');
 
@@ -125,27 +99,28 @@ document.addEventListener('DOMContentLoaded', () => {
     loginForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const email = document.getElementById('login-email').value.trim().toLowerCase();
-      const password = document.getElementById('login-password').value;
+      const email = document.getElementById('login-email').value.trim();
       const role = document.getElementById('selected-role').value;
 
-      const users = getUsers();
-      const match = users.find(u => u.email === email && u.password === password && u.role === role);
-
-      if (!match) {
-        loginNote.textContent = `No ${role} account matches those details. Check your credentials or role.`;
+      if (!email) {
+        loginNote.textContent = 'Please enter your email address.';
         loginNote.className = 'auth-note error';
         return;
       }
 
-      sessionStorage.setItem('pawfetch_current_user', JSON.stringify(match));
+      // Save just enough info for the dashboard greeting — no validation required.
+      sessionStorage.setItem('pawfetch_current_user', JSON.stringify({
+        name: email.split('@')[0] || 'Pet Parent',
+        email,
+        role
+      }));
 
-      loginNote.textContent = `Welcome back, ${match.name}! Redirecting to your dashboard... 🐾`;
+      loginNote.textContent = `Welcome! Redirecting to your ${role === 'admin' ? 'admin' : ''} dashboard... 🐾`;
       loginNote.className = 'auth-note success';
 
       setTimeout(() => {
         window.location.href = role === 'admin' ? 'admindashboard.html' : 'userdashboard.html';
-      }, 1200);
+      }, 900);
     });
   }
 

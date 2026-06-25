@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — Pawfetch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dash-body">
+
+<div class="dash-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="dash-sidebar" id="dash-sidebar">
+    <a href="index.html" class="brand light">
+      <span class="brand-icon"><i class="fa-solid fa-paw"></i></span>
+      <span class="brand-name">Stackly</span>
+    </a>
+
+    <span class="sidebar-label">Main</span>
+    <nav class="dash-nav">
+      <a href="#overview" class="active"><i class="fa-solid fa-grip"></i> Overview</a>
+      <a href="#orders"><i class="fa-solid fa-bag-shopping"></i> Orders</a>
+      <a href="#products"><i class="fa-solid fa-boxes-stacked"></i> Products</a>
+      <a href="#customers"><i class="fa-solid fa-users"></i> Customers</a>
+      <a href="#bookings"><i class="fa-solid fa-calendar-check"></i> Bookings</a>
+    </nav>
+
+    <span class="sidebar-label">System</span>
+    <nav class="dash-nav">
+      <a href="404.html?from=admindashboard"><i class="fa-solid fa-gear"></i> Settings</a>
+      <a href="404.html?from=admindashboard"><i class="fa-solid fa-circle-question"></i> Help Center</a>
+    </nav>
+
+    <div class="sidebar-promo">
+      <i class="fa-solid fa-paw"></i>
+      <p>You're managing<br><strong>Pawfetch HQ</strong></p>
+    </div>
+
+    <a href="login.html" class="logout-link" id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+  </aside>
+
+  <div class="dash-overlay" id="dash-overlay"></div>
+
+  <!-- MAIN -->
+  <div class="dash-main">
+
+    <!-- TOPBAR -->
+    <header class="dash-topbar">
+      <button class="dash-menu-btn" id="dash-menu-btn" aria-label="Toggle sidebar"><i class="fa-solid fa-bars"></i></button>
+      <div class="dash-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search orders, products, customers...">
+      </div>
+      <div class="dash-topbar-actions">
+        <button class="dash-icon-btn"><i class="fa-solid fa-bell"></i><span class="dot"></span></button>
+        <button class="dash-icon-btn"><i class="fa-solid fa-envelope"></i></button>
+        <div class="dash-profile">
+          <img src="Assest/shop14.webp" alt="Admin avatar">
+          <div class="dash-profile-text">
+            <strong id="admin-name">Admin</strong>
+            <span>Administrator</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="dash-content">
+
+      <!-- 1. WELCOME + STATS -->
+      <section id="overview" class="dash-section">
+        <div class="dash-welcome" data-animate="fade-up">
+          <div>
+            <h1>Welcome back, <span id="admin-name-2">Admin</span> <i class="fa-solid fa-paw"></i></h1>
+            <p>Here's what's happening across your stores today.</p>
+          </div>
+          <a href="#products" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add New Product</a>
+        </div>
+
+        <div class="stat-cards-grid">
+          <div class="dash-stat-card" data-animate="fade-up" data-delay="0">
+            <div class="dash-stat-icon icon-clay"><i class="fa-solid fa-bag-shopping"></i></div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-num" data-count="1842">0</span>
+              <span class="dash-stat-label">Total Orders</span>
+            </div>
+            <span class="trend up"><i class="fa-solid fa-arrow-trend-up"></i> 12.4%</span>
+          </div>
+          <div class="dash-stat-card" data-animate="fade-up" data-delay="100">
+            <div class="dash-stat-icon icon-forest"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-num" data-count="486200" data-prefix="₹">0</span>
+              <span class="dash-stat-label">Revenue (This Month)</span>
+            </div>
+            <span class="trend up"><i class="fa-solid fa-arrow-trend-up"></i> 8.1%</span>
+          </div>
+          <div class="dash-stat-card" data-animate="fade-up" data-delay="200">
+            <div class="dash-stat-icon icon-gold"><i class="fa-solid fa-users"></i></div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-num" data-count="9320">0</span>
+              <span class="dash-stat-label">Active Customers</span>
+            </div>
+            <span class="trend up"><i class="fa-solid fa-arrow-trend-up"></i> 5.7%</span>
+          </div>
+          <div class="dash-stat-card" data-animate="fade-up" data-delay="300">
+            <div class="dash-stat-icon icon-sage"><i class="fa-solid fa-calendar-check"></i></div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-num" data-count="276">0</span>
+              <span class="dash-stat-label">Bookings This Week</span>
+            </div>
+            <span class="trend down"><i class="fa-solid fa-arrow-trend-down"></i> 2.3%</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. CHART + TOP PRODUCTS -->
+      <section class="dash-section grid-2">
+        <div class="dash-panel" data-animate="fade-up">
+          <div class="panel-head">
+            <h3><i class="fa-solid fa-chart-column"></i> Sales Overview</h3>
+            <select class="panel-select"><option>Last 7 Days</option><option>Last 30 Days</option><option>This Year</option></select>
+          </div>
+          <div class="bar-chart" id="bar-chart">
+            <div class="bar-col"><div class="bar" data-height="55"></div><span>Mon</span></div>
+            <div class="bar-col"><div class="bar" data-height="70"></div><span>Tue</span></div>
+            <div class="bar-col"><div class="bar" data-height="40"></div><span>Wed</span></div>
+            <div class="bar-col"><div class="bar" data-height="85"></div><span>Thu</span></div>
+            <div class="bar-col"><div class="bar" data-height="65"></div><span>Fri</span></div>
+            <div class="bar-col"><div class="bar" data-height="95"></div><span>Sat</span></div>
+            <div class="bar-col"><div class="bar" data-height="75"></div><span>Sun</span></div>
+          </div>
+        </div>
+
+        <div class="dash-panel" data-animate="fade-up" data-delay="100">
+          <div class="panel-head">
+            <h3><i class="fa-solid fa-ranking-star"></i> Top Products</h3>
+          </div>
+          <div class="top-products-list">
+            <div class="top-product-row">
+              <img src="Assest/shop5.webp" alt="Kibble">
+              <div><strong>Salmon Kibble</strong><span>312 sold</span></div>
+              <div class="progress-track"><div class="progress-fill" style="width:88%"></div></div>
+            </div>
+            <div class="top-product-row">
+              <img src="Assest/shop8.webp" alt="Toy">
+              <div><strong>Rope Bone Toy</strong><span>198 sold</span></div>
+              <div class="progress-track"><div class="progress-fill" style="width:64%"></div></div>
+            </div>
+            <div class="top-product-row">
+              <img src="Assest/shop19.webp" alt="Bed">
+              <div><strong>Plush Bed</strong><span>264 sold</span></div>
+              <div class="progress-track"><div class="progress-fill" style="width:74%"></div></div>
+            </div>
+            <div class="top-product-row">
+              <img src="Assest/shop7.webp" alt="Brush">
+              <div><strong>Deshedding Brush</strong><span>141 sold</span></div>
+              <div class="progress-track"><div class="progress-fill" style="width:48%"></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. RECENT ORDERS TABLE -->
+      <section id="orders" class="dash-section">
+        <div class="dash-panel" data-animate="fade-up">
+          <div class="panel-head">
+            <h3><i class="fa-solid fa-receipt"></i> Recent Orders</h3>
+            <a href="404.html?from=admindashboard" class="link-arrow small">View all <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="table-wrap">
+            <table class="dash-table">
+              <thead><tr><th>Order ID</th><th>Customer</th><th>Item</th><th>Amount</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>#PF1042</td>
+                  <td><div class="cust-cell"><img src="Assest/shop14.webp" alt=""> Aditi Rao</div></td>
+                  <td>Salmon Kibble x2</td><td>₹2,598</td>
+                  <td><span class="status delivered">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td>#PF1041</td>
+                  <td><div class="cust-cell"><img src="Assest/shop15.webp" alt=""> Rohit Mehta</div></td>
+                  <td>Plush Bed</td><td>₹2,199</td>
+                  <td><span class="status shipped">Shipped</span></td>
+                </tr>
+                <tr>
+                  <td>#PF1040</td>
+                  <td><div class="cust-cell"><img src="Assest/shop16.webp" alt=""> Sneha Iyer</div></td>
+                  <td>Grooming Kit</td><td>₹899</td>
+                  <td><span class="status pending">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>#PF1039</td>
+                  <td><div class="cust-cell"><img src="Assest/shop24.webp" alt=""> Karan Shah</div></td>
+                  <td>Rope Bone Toy</td><td>₹449</td>
+                  <td><span class="status cancelled">Cancelled</span></td>
+                </tr>
+                <tr>
+                  <td>#PF1038</td>
+                  <td><div class="cust-cell"><img src="Assest/shop25.webp" alt=""> Priya Sharma</div></td>
+                  <td>Scratching Tower</td><td>₹1,649</td>
+                  <td><span class="status delivered">Delivered</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. CUSTOMERS GRID -->
+      <section id="customers" class="dash-section">
+        <div class="section-head" data-animate="fade-up">
+          <h2 class="dash-h2"><i class="fa-solid fa-users"></i> Recent Customers</h2>
+        </div>
+        <div class="cust-grid">
+          <div class="cust-card" data-animate="fade-up" data-delay="0">
+            <img src="Assest/shop14.webp" alt="Aditi Rao">
+            <h4>Aditi Rao</h4><span>14 orders</span>
+          </div>
+          <div class="cust-card" data-animate="fade-up" data-delay="100">
+            <img src="Assest/shop15.webp" alt="Rohit Mehta">
+            <h4>Rohit Mehta</h4><span>9 orders</span>
+          </div>
+          <div class="cust-card" data-animate="fade-up" data-delay="200">
+            <img src="Assest/shop16.webp" alt="Sneha Iyer">
+            <h4>Sneha Iyer</h4><span>21 orders</span>
+          </div>
+          <div class="cust-card" data-animate="fade-up" data-delay="300">
+            <img src="Assest/shop24.webp" alt="Karan Shah">
+            <h4>Karan Shah</h4><span>5 orders</span>
+          </div>
+          <div class="cust-card" data-animate="fade-up" data-delay="400">
+            <img src="Assest/shop25.webp" alt="Priya Sharma">
+            <h4>Priya Sharma</h4><span>17 orders</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. BOOKINGS LIST -->
+      <section id="bookings" class="dash-section">
+        <div class="dash-panel" data-animate="fade-up">
+          <div class="panel-head">
+            <h3><i class="fa-solid fa-calendar-check"></i> Upcoming Service Bookings</h3>
+          </div>
+          <div class="booking-list">
+            <div class="booking-row">
+              <div class="booking-icon"><i class="fa-solid fa-shower"></i></div>
+              <div class="booking-info"><strong>Grooming — Max (Golden Retriever)</strong><span>Today, 4:30 PM</span></div>
+              <span class="status pending">Upcoming</span>
+            </div>
+            <div class="booking-row">
+              <div class="booking-icon"><i class="fa-solid fa-stethoscope"></i></div>
+              <div class="booking-info"><strong>Vet Consult — Mochi (Cat)</strong><span>Tomorrow, 11:00 AM</span></div>
+              <span class="status shipped">Confirmed</span>
+            </div>
+            <div class="booking-row">
+              <div class="booking-icon"><i class="fa-solid fa-syringe"></i></div>
+              <div class="booking-info"><strong>Vaccination — Simba (Labrador)</strong><span>Fri, 2:00 PM</span></div>
+              <span class="status delivered">Confirmed</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. PRODUCTS QUICK MANAGE -->
+      <section id="products" class="dash-section">
+        <div class="section-head split" data-animate="fade-up">
+          <h2 class="dash-h2"><i class="fa-solid fa-boxes-stacked"></i> Manage Products</h2>
+          <a href="404.html?from=admindashboard" class="btn btn-small btn-primary"><i class="fa-solid fa-plus"></i> New Product</a>
+        </div>
+        <div class="manage-grid">
+          <div class="manage-card" data-animate="fade-up" data-delay="0">
+            <img src="Assest/shop5.webp" alt="Kibble">
+            <div class="manage-info">
+              <h4>Grain-Free Salmon Kibble</h4>
+              <span>Stock: 240 units</span>
+              <div class="manage-actions">
+                <button class="icon-btn"><i class="fa-solid fa-pen"></i></button>
+                <button class="icon-btn danger"><i class="fa-solid fa-trash"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="manage-card" data-animate="fade-up" data-delay="100">
+            <img src="Assest/shop6.webp" alt="Toy">
+            <div class="manage-info">
+              <h4>Squeaky Rope Bone</h4>
+              <span>Stock: 86 units</span>
+              <div class="manage-actions">
+                <button class="icon-btn"><i class="fa-solid fa-pen"></i></button>
+                <button class="icon-btn danger"><i class="fa-solid fa-trash"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="manage-card" data-animate="fade-up" data-delay="200">
+            <img src="Assest/shop19.webp" alt="Bed">
+            <div class="manage-info">
+              <h4>Cloudsoft Plush Bed</h4>
+              <span>Stock: 12 units</span>
+              <div class="manage-actions">
+                <button class="icon-btn"><i class="fa-solid fa-pen"></i></button>
+                <button class="icon-btn danger"><i class="fa-solid fa-trash"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Pawfetch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="paw-progress"><i class="fa-solid fa-paw"></i></div>
+
+<!-- HEADER -->
+<header class="site-header" id="header">
+  <div class="container header-inner">
+    <div class="logo">
+        <a href="index.html">
+            <img src="Assest/stacklylogo (1).webp" alt="Logo">
+        </a>
+    </div>
+
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="service.html" class="active">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="plan.html">Plans</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="login.html" class="btn btn-small btn-primary nav-cta">Login</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-overlay" id="nav-overlay"></div>
+
+<main>
+
+  <!-- 1. SERVICES HERO -->
+  <section class="service-hero" id="service-home">
+    <div class="container service-hero-inner">
+      <div class="service-hero-copy" data-animate="fade-up">
+        <span class="breadcrumb"><a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>Services</span></span>
+        <h1>Care your pet can <em>feel</em>, delivered by experts</h1>
+        <p>From spa days to emergency vet calls, every Pawfetch service is handled by licensed, background-checked professionals who treat your pet like family.</p>
+        <div class="hero-actions">
+          <a href="#book" class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> Book a Service</a>
+          <a href="#pricing" class="btn btn-ghost"><i class="fa-solid fa-tags"></i> View Pricing</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>50+</strong><span>Certified Experts</span></div>
+          <div class="stat"><strong>4.9<i class="fa-solid fa-star"></i></strong><span>Service Rating</span></div>
+          <div class="stat"><strong>24/7</strong><span>Emergency Line</span></div>
+        </div>
+      </div>
+
+      <div class="service-hero-media" data-animate="fade-in">
+        <div class="service-hero-frame">
+          <img src="Assest/shop8.webp" alt="Veterinarian caring for a dog">
+        </div>
+        <div class="floating-card card-top">
+          <i class="fa-solid fa-user-doctor"></i>
+          <div><strong>Licensed Vets</strong><span>On call round the clock</span></div>
+        </div>
+        <div class="floating-card card-bottom">
+          <i class="fa-solid fa-clock"></i>
+          <div><strong>Same-Day Slots</strong><span>Book in under a minute</span></div>
+        </div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SERVICES OVERVIEW GRID -->
+  <section class="section services-overview" id="services-list">
+    <div class="container">
+      <div class="section-head" data-animate="fade-up">
+        <span class="eyebrow"><i class="fa-solid fa-hand-holding-heart"></i> What We Offer</span>
+        <h2>A service for every chapter of pet life</h2>
+        <p>Pick a single visit or bundle services into a membership — every booking includes free rescheduling.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" data-animate="fade-up" data-delay="0">
+          <div class="service-img"><img src="Assest/shop7.webp" alt="Dog grooming"></div>
+          <div class="service-icon"><i class="fa-solid fa-shower"></i></div>
+          <h3>Spa &amp; Grooming</h3>
+          <p>Bath, trim, nail care and de-shedding sessions tailored to your pet's coat and mood.</p>
+          <a href="#book" class="link-arrow small">Book now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-animate="fade-up" data-delay="100">
+          <div class="service-img"><img src="Assest/shop22.webp" alt="Vet consultation"></div>
+          <div class="service-icon"><i class="fa-solid fa-stethoscope"></i></div>
+          <h3>Vet Consultations</h3>
+          <p>In-clinic or video consults with licensed veterinarians, available around the clock.</p>
+          <a href="#book" class="link-arrow small">Book now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-animate="fade-up" data-delay="200">
+          <div class="service-img"><img src="Assest/shop12.webp" alt="Pet boarding home"></div>
+          <div class="service-icon"><i class="fa-solid fa-house-chimney-medical"></i></div>
+          <h3>Pet Boarding</h3>
+          <p>A cozy, supervised home-away-from-home for your pet while you're travelling.</p>
+          <a href="#book" class="link-arrow small">Book now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-animate="fade-up" data-delay="300">
+          <div class="service-img"><img src="Assest/shop23.webp" alt="Vaccination">
+          </div>
+          <div class="service-icon"><i class="fa-solid fa-syringe"></i></div>
+          <h3>Vaccination Drives</h3>
+          <p>Scheduled immunization reminders and at-home vaccination visits.</p>
+          <a href="#book" class="link-arrow small">Book now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-animate="fade-up" data-delay="400">
+          <div class="service-img"><img src="Assest/shop1.webp" alt="Dog training session"></div>
+          <div class="service-icon"><i class="fa-solid fa-dog"></i></div>
+          <h3>Dog Training</h3>
+          <p>Positive-reinforcement training programs for puppies, adults and rescues.</p>
+          <a href="#book" class="link-arrow small">Book now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-animate="fade-up" data-delay="500">
+          <div class="service-img"><img src="Assest/shop10.webp" alt="Pet pickup van"></div>
+          <div class="service-icon"><i class="fa-solid fa-van-shuttle"></i></div>
+          <h3>Pickup &amp; Drop</h3>
+          <p>Safe, comfortable rides to and from appointments — no carrier required.</p>
+          <a href="#book" class="link-arrow small">Book now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. HOW IT WORKS -->
+  <section class="section how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-head center" data-animate="fade-up">
+        <span class="eyebrow"><i class="fa-solid fa-route"></i> Simple Process</span>
+        <h2>Booking a service takes under a minute</h2>
+      </div>
+
+      <div class="steps-row">
+        <div class="step-card" data-animate="fade-up" data-delay="0">
+          <div class="step-number">01</div>
+          <div class="step-icon"><i class="fa-solid fa-list-check"></i></div>
+          <h3>Choose a Service</h3>
+          <p>Pick grooming, vet care, boarding or training based on what your pet needs.</p>
+        </div>
+        <div class="step-connector" aria-hidden="true"><i class="fa-solid fa-paw"></i></div>
+        <div class="step-card" data-animate="fade-up" data-delay="150">
+          <div class="step-number">02</div>
+          <div class="step-icon"><i class="fa-solid fa-calendar-days"></i></div>
+          <h3>Pick a Slot</h3>
+          <p>Select a date and time that fits your schedule — same-day slots available.</p>
+        </div>
+        <div class="step-connector" aria-hidden="true"><i class="fa-solid fa-paw"></i></div>
+        <div class="step-card" data-animate="fade-up" data-delay="300">
+          <div class="step-number">03</div>
+          <div class="step-icon"><i class="fa-solid fa-user-check"></i></div>
+          <h3>Meet Your Expert</h3>
+          <p>A verified groomer or vet arrives or greets you at the clinic, right on time.</p>
+        </div>
+        <div class="step-connector" aria-hidden="true"><i class="fa-solid fa-paw"></i></div>
+        <div class="step-card" data-animate="fade-up" data-delay="450">
+          <div class="step-number">04</div>
+          <div class="step-icon"><i class="fa-solid fa-face-smile-beam"></i></div>
+          <h3>Happy Pet, Happy You</h3>
+          <p>Get a digital care summary and book the next visit in one tap.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SERVICE PRICING -->
+  <section class="section service-pricing" id="pricing">
+    <div class="container">
+      <div class="section-head" data-animate="fade-up">
+        <span class="eyebrow"><i class="fa-solid fa-tags"></i> Transparent Pricing</span>
+        <h2>Pay only for what your pet needs</h2>
+        <p>No hidden fees — every price below includes consumables and a digital visit summary.</p>
+      </div>
+
+      <div class="pricing-table" data-animate="fade-up">
+        <div class="pricing-row pricing-head">
+          <span>Service</span><span>Duration</span><span>Starting At</span><span></span>
+        </div>
+        <div class="pricing-row">
+          <span><i class="fa-solid fa-shower"></i> Full Grooming Package</span>
+          <span>60 mins</span>
+          <span class="amt">₹899</span>
+          <a href="#book" class="btn btn-small btn-outline">Book</a>
+        </div>
+        <div class="pricing-row">
+          <span><i class="fa-solid fa-stethoscope"></i> General Vet Consultation</span>
+          <span>30 mins</span>
+          <span class="amt">₹499</span>
+          <a href="#book" class="btn btn-small btn-outline">Book</a>
+        </div>
+        <div class="pricing-row">
+          <span><i class="fa-solid fa-house-chimney-medical"></i> Pet Boarding (per night)</span>
+          <span>24 hrs</span>
+          <span class="amt">₹699</span>
+          <a href="#book" class="btn btn-small btn-outline">Book</a>
+        </div>
+        <div class="pricing-row">
+          <span><i class="fa-solid fa-syringe"></i> Vaccination Visit</span>
+          <span>20 mins</span>
+          <span class="amt">₹399</span>
+          <a href="#book" class="btn btn-small btn-outline">Book</a>
+        </div>
+        <div class="pricing-row">
+          <span><i class="fa-solid fa-dog"></i> Training Session</span>
+          <span>45 mins</span>
+          <span class="amt">₹799</span>
+          <a href="#book" class="btn btn-small btn-outline">Book</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. MEET OUR EXPERTS -->
+  <section class="section team-section" id="team">
+    <div class="container">
+      <div class="section-head center" data-animate="fade-up">
+        <span class="eyebrow"><i class="fa-solid fa-people-group"></i> Meet Our Experts</span>
+        <h2>The hands your pet will trust</h2>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card" data-animate="fade-up" data-delay="0">
+          <div class="team-img"><img src="Assest/shop24.webp" alt="Dr. Meera Nair portrait"></div>
+          <h3>Dr. Meera Nair</h3>
+          <span>Lead Veterinarian</span>
+          <div class="team-social">
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="team-card" data-animate="fade-up" data-delay="100">
+          <div class="team-img"><img src="Assest/shop22.webp" alt="Arjun Verma portrait"></div>
+          <h3>Arjun Verma</h3>
+          <span>Senior Groomer</span>
+          <div class="team-social">
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="team-card" data-animate="fade-up" data-delay="200">
+          <div class="team-img"><img src="Assest/shop25.webp" alt="Priya Sharma portrait"></div>
+          <h3>Priya Sharma</h3>
+          <span>Dog Behaviorist</span>
+          <div class="team-social">
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="team-card" data-animate="fade-up" data-delay="300">
+          <div class="team-img"><img src="Assest/shop26.webp" alt="Dr. Karan Shah portrait"></div>
+          <h3>Dr. Karan Shah</h3>
+          <span>Emergency Vet</span>
+          <div class="team-social">
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. BOOKING / CTA -->
+  <section class="section booking-section" id="book">
+    <div class="container booking-inner">
+      <div class="booking-media" data-animate="fade-in">
+        <img src="Assest/shop13.webp" alt="Happy dog ready for appointment">
+        <div class="why-badge"><i class="fa-solid fa-shield-heart"></i><span>100% Satisfaction<br>Guarantee</span></div>
+      </div>
+
+      <form class="booking-form" id="booking-form" data-animate="fade-up">
+        <span class="eyebrow"><i class="fa-solid fa-calendar-check"></i> Book a Service</span>
+        <h2>Schedule your pet's next visit</h2>
+        <p>Fill in the details below and our care team will confirm your slot within minutes.</p>
+
+        <div class="form-grid">
+          <div class="form-field">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="form-field">
+            <i class="fa-solid fa-phone"></i>
+            <input type="tel" placeholder="Phone Number" required>
+          </div>
+          <div class="form-field">
+            <i class="fa-solid fa-paw"></i>
+            <select required>
+              <option value="" disabled selected>Select a Service</option>
+              <option>Spa &amp; Grooming</option>
+              <option>Vet Consultation</option>
+              <option>Pet Boarding</option>
+              <option>Vaccination</option>
+              <option>Dog Training</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <i class="fa-solid fa-calendar-days"></i>
+            <input type="date" required>
+          </div>
+        </div>
+        <div class="form-field full">
+          <i class="fa-solid fa-message"></i>
+          <textarea placeholder="Anything we should know about your pet?" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> <a href="contact.html">Confirm Booking</a></button>
+        <p class="form-note" id="booking-note">We'll text you a confirmation shortly.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <a href="service.html">
+            <img src="Assest/stacklylogo (1).webp" alt="Logo">
+        </a>
+    </div>
+      <p>Premium pet shop and care services — food, grooming, vet support and more, all in one trusted place.</p>
+      <div class="social-row">
+        <a href="404.html?from=home"><i class="fa-brands fa-facebook-f"></i></a>
+<a href="404.html?from=home"><i class="fa-brands fa-instagram"></i></a>
+<a href="404.html?from=home"><i class="fa-brands fa-x-twitter"></i></a>
+<a href="404.html?from=home"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="shop.html">Dog Food</a></li>
+        <li><a href="shop.html">Cat Food</a></li>
+        <li><a href="shop.html">Toys</a></li>
+        <li><a href="shop.html">Grooming Tools</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="plan.html">Membership</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">Shipping Info</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Track Order</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year"></span> Pawfetch. All rights reserved.</p>
+    <p>Made with <i class="fa-solid fa-heart"></i> for pets everywhere.</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+  const form = document.getElementById('booking-form');
+  const note = document.getElementById('booking-note');
+
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      note.textContent = "Booking received! We'll confirm via SMS shortly. 🐾";
+      note.style.color = '#E8B95C';
+      note.style.fontWeight = '600';
+      form.reset();
+    });
+  }
+
+
+  /* Pricing row buttons jump to booking form and prefill nothing fancy, just scroll */
+  document.querySelectorAll('.pricing-row .btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const target = document.querySelector('#book');
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>

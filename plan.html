@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Membership Plans — Pawfetch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="paw-progress"><i class="fa-solid fa-paw"></i></div>
+
+<!-- HEADER -->
+<header class="site-header" id="header">
+  <div class="container header-inner">
+    <div class="logo">
+        <a href="index.html">
+            <img src="Assest/stacklylogo (1).webp" alt="Logo">
+        </a>
+    </div>
+
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="plan.html" class="active">Plans</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="login.html" class="btn btn-small btn-primary nav-cta">Login</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-overlay" id="nav-overlay"></div>
+
+<main>
+
+  <!-- 1. PLANS HERO -->
+  <section class="plan-hero" id="plan-home">
+    <div class="container plan-hero-inner">
+      <div class="plan-hero-copy" data-animate="fade-up">
+        <span class="breadcrumb"><a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>Plans</span></span>
+        <h1>One membership. Every kind of <em>care</em>, covered.</h1>
+        <p>Bundle shopping discounts, grooming sessions and vet access into a single monthly plan — built around how often your pet actually needs you.</p>
+        <div class="hero-actions">
+          <a href="plan.html" class="btn btn-primary"><i class="fa-solid fa-paw"></i> Choose a Plan</a>
+          <a href="#compare" class="btn btn-ghost"><i class="fa-solid fa-table-list"></i> Compare Features</a>
+        </div>
+      </div>
+      <div class="plan-hero-media" data-animate="fade-in">
+        <div class="plan-hero-frame">
+          <img src="Assest/shop4.webp" alt="Cat and dog membership care">
+        </div>
+        <div class="floating-card card-top">
+          <i class="fa-solid fa-percent"></i>
+          <div><strong>Save up to 30%</strong><span>On every order</span></div>
+        </div>
+        <div class="floating-card card-bottom">
+          <i class="fa-solid fa-rotate"></i>
+          <div><strong>Cancel Anytime</strong><span>No lock-in contracts</span></div>
+        </div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. PRICING CARDS WITH TOGGLE -->
+  <section class="section plan-pricing" id="choose">
+    <div class="container">
+      <div class="section-head center" data-animate="fade-up">
+        <span class="eyebrow"><i class="fa-solid fa-paw"></i> Membership Plans</span>
+        <h2>Pick the plan that fits your pet's life</h2>
+        <p>Switch, pause, or cancel whenever — no questions asked.</p>
+
+        <div class="billing-toggle">
+          <span class="toggle-label active" id="label-monthly">Monthly</span>
+          <button class="toggle-switch" id="billing-toggle" aria-label="Toggle annual billing">
+            <span class="toggle-knob"></span>
+          </button>
+          <span class="toggle-label" id="label-yearly">Yearly <small>Save 15%</small></span>
+        </div>
+      </div>
+
+      <div class="plans-grid">
+        <div class="plan-card" data-animate="fade-up" data-delay="0">
+          <h3>Starter</h3>
+          <div class="plan-price"><span class="amount" data-monthly="499" data-yearly="424">₹499</span><span class="period">/mo</span></div>
+          <p>For the casual pet parent just getting started.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> 10% off all products</li>
+            <li><i class="fa-solid fa-check"></i> Monthly grooming reminder</li>
+            <li><i class="fa-solid fa-check"></i> Email vet support</li>
+            <li><i class="fa-solid fa-xmark"></i> Free delivery</li>
+            <li><i class="fa-solid fa-xmark"></i> Priority vet calls</li>
+          </ul>
+          <a href="plan.html" class="btn btn-outline">Choose Starter</a>
+        </div>
+
+        <div class="plan-card featured" data-animate="fade-up" data-delay="100">
+          <span class="plan-tag">Most Popular</span>
+          <h3>Companion</h3>
+          <div class="plan-price"><span class="amount" data-monthly="999" data-yearly="849">₹999</span><span class="period">/mo</span></div>
+          <p>Balanced care for everyday pet households.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> 20% off all products</li>
+            <li><i class="fa-solid fa-check"></i> Free monthly grooming</li>
+            <li><i class="fa-solid fa-check"></i> Priority vet video calls</li>
+            <li><i class="fa-solid fa-check"></i> Free delivery, always</li>
+            <li><i class="fa-solid fa-check"></i> Birthday surprise box</li>
+          </ul>
+          <a href="plan.html" class="btn btn-primary">Choose Companion</a>
+        </div>
+
+        <div class="plan-card" data-animate="fade-up" data-delay="200">
+          <h3>Family Pack</h3>
+          <div class="plan-price"><span class="amount" data-monthly="1799" data-yearly="1529">₹1,799</span><span class="period">/mo</span></div>
+          <p>For multi-pet homes that need it all.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> 30% off all products</li>
+            <li><i class="fa-solid fa-check"></i> 2 grooming sessions/mo</li>
+            <li><i class="fa-solid fa-check"></i> 24/7 vet hotline</li>
+            <li><i class="fa-solid fa-check"></i> Annual health checkup</li>
+            <li><i class="fa-solid fa-check"></i> Multi-pet discounts</li>
+          </ul>
+          <a href="plan.html" class="btn btn-outline">Choose Family Pack</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. FEATURE COMPARISON TABLE -->
+  <section class="section compare-section" id="compare">
+    <div class="container">
+      <div class="section-head" data-animate="fade-up">
+        <span class="eyebrow"><i class="fa-solid fa-table-list"></i> Side by Side</span>
+        <h2>Compare every plan feature</h2>
+      </div>
+
+      <div class="compare-table-wrap" data-animate="fade-up">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Starter</th>
+              <th class="highlight">Companion</th>
+              <th>Family Pack</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i class="fa-solid fa-tags"></i> Shop discount</td>
+              <td>10%</td><td class="highlight">20%</td><td>30%</td>
+            </tr>
+            <tr>
+              <td><i class="fa-solid fa-shower"></i> Grooming sessions</td>
+              <td>—</td><td class="highlight">1 / month</td><td>2 / month</td>
+            </tr>
+            <tr>
+              <td><i class="fa-solid fa-truck"></i> Free delivery</td>
+              <td><i class="fa-solid fa-xmark icon-no"></i></td>
+              <td class="highlight"><i class="fa-solid fa-check icon-yes"></i></td>
+              <td><i class="fa-solid fa-check icon-yes"></i></td>
+            </tr>
+            <tr>
+              <td><i class="fa-solid fa-user-doctor"></i> Vet access</td>
+              <td>Email only</td><td class="highlight">Priority video</td><td>24/7 hotline</td>
+            </tr>
+            <tr>
+              <td><i class="fa-solid fa-gift"></i> Birthday box</td>
+              <td><i class="fa-solid fa-xmark icon-no"></i></td>
+              <td class="highlight"><i class="fa-solid fa-check icon-yes"></i></td>
+              <td><i class="fa-solid fa-check icon-yes"></i></td>
+            </tr>
+            <tr>
+              <td><i class="fa-solid fa-stethoscope"></i> Annual checkup</td>
+              <td><i class="fa-solid fa-xmark icon-no"></i></td>
+              <td class="highlight"><i class="fa-solid fa-xmark icon-no"></i></td>
+              <td><i class="fa-solid fa-check icon-yes"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. HOW MEMBERSHIP WORKS -->
+  <section class="section membership-steps" id="how-membership">
+    <div class="container">
+      <div class="section-head center" data-animate="fade-up">
+        <span class="eyebrow"><i class="fa-solid fa-route"></i> Getting Started</span>
+        <h2>Three steps to stress-free pet care</h2>
+      </div>
+
+      <div class="steps-row">
+        <div class="step-card" data-animate="fade-up" data-delay="0">
+          <div class="step-icon"><i class="fa-solid fa-hand-pointer"></i></div>
+          <h3>Pick Your Plan</h3>
+          <p>Choose Starter, Companion or Family Pack based on your pet's needs.</p>
+        </div>
+        <div class="step-connector" aria-hidden="true"><i class="fa-solid fa-paw"></i></div>
+        <div class="step-card" data-animate="fade-up" data-delay="150">
+          <div class="step-icon"><i class="fa-solid fa-credit-card"></i></div>
+          <h3>Set Up Billing</h3>
+          <p>Pay monthly or yearly — switch plans anytime from your account.</p>
+        </div>
+        <div class="step-connector" aria-hidden="true"><i class="fa-solid fa-paw"></i></div>
+        <div class="step-card" data-animate="fade-up" data-delay="300">
+          <div class="step-icon"><i class="fa-solid fa-bone"></i></div>
+          <h3>Enjoy the Perks</h3>
+          <p>Discounts apply instantly and your grooming slots are ready to book.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FAQ -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-head center" data-animate="fade-up">
+        <span class="eyebrow"><i class="fa-solid fa-circle-question"></i> Got Questions?</span>
+        <h2>Frequently asked questions</h2>
+      </div>
+
+      <div class="faq-list" data-animate="fade-up">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span><i class="fa-solid fa-paw"></i> Can I cancel my membership anytime?</span>
+            <i class="fa-solid fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes — there are no lock-in contracts. You can pause or cancel your plan anytime from your account, effective at the end of your current billing cycle.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span><i class="fa-solid fa-paw"></i> Do grooming sessions roll over if unused?</span>
+            <i class="fa-solid fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Unused grooming sessions roll over for one additional month, after which they expire. We'll always remind you before they do.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span><i class="fa-solid fa-paw"></i> Can I switch between plans?</span>
+            <i class="fa-solid fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. You can upgrade or downgrade at any time, and the price difference is prorated automatically on your next invoice.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span><i class="fa-solid fa-paw"></i> Is the vet hotline available for emergencies?</span>
+            <i class="fa-solid fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes — Family Pack members get access to a 24/7 vet hotline for urgent concerns, with priority routing to the nearest partner clinic if needed.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span><i class="fa-solid fa-paw"></i> Does the discount apply to sale items too?</span>
+            <i class="fa-solid fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Membership discounts stack with most promotions, except clearance items marked as final sale.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CTA -->
+  <section class="section cta-contact" id="plan-cta">
+    <div class="container cta-inner" data-animate="fade-up">
+      <div class="cta-copy">
+        <span class="eyebrow light"><i class="fa-solid fa-paw"></i> Ready When You Are</span>
+        <h2>Start your membership in under 2 minutes</h2>
+        <p>Join thousands of pet parents already saving on food, grooming and vet visits every month.</p>
+        <div class="hero-actions">
+          <a href="plan.html" class="btn btn-primary"><i class="fa-solid fa-paw"></i> Choose My Plan</a>
+          <a href="contact.html" class="btn btn-ghost light"><i class="fa-solid fa-calendar-check"></i> Talk to Us First</a>
+        </div>
+      </div>
+      <div class="cta-media">
+        <img src="Assest/shop9.webp" alt="Dog enjoying membership perks">
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <a href="plan.html">
+            <img src="Assest/stacklylogo (1).webp" alt="Logo">
+        </a>
+    </div>
+      <p>Premium pet shop and care services — food, grooming, vet support and more, all in one trusted place.</p>
+      <div class="social-row">
+        <a href="404.html?from=home"><i class="fa-brands fa-facebook-f"></i></a>
+<a href="404.html?from=home"><i class="fa-brands fa-instagram"></i></a>
+<a href="404.html?from=home"><i class="fa-brands fa-x-twitter"></i></a>
+<a href="404.html?from=home"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="shop.html">Dog Food</a></li>
+        <li><a href="shop.html">Cat Food</a></li>
+        <li><a href="shop.html">Toys</a></li>
+        <li><a href="shop.html">Grooming Tools</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="plan.html">Membership</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="contact.html">Shipping Info</a></li>
+        <li><a href="contact.html">Returns</a></li>
+        <li><a href="contact.html">FAQs</a></li>
+        <li><a href="contact.html">Track Order</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year"></span> Pawfetch. All rights reserved.</p>
+    <p>Made with <i class="fa-solid fa-heart"></i> for pets everywhere.</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script >
+    document.addEventListener('DOMContentLoaded', () => {
+
+  /* ===== BILLING TOGGLE (Monthly / Yearly) ===== */
+  const toggleBtn = document.getElementById('billing-toggle');
+  const labelMonthly = document.getElementById('label-monthly');
+  const labelYearly = document.getElementById('label-yearly');
+  const amounts = document.querySelectorAll('.plan-price .amount');
+  const periods = document.querySelectorAll('.plan-price .period');
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const isYearly = toggleBtn.classList.toggle('active');
+      labelMonthly.classList.toggle('active', !isYearly);
+      labelYearly.classList.toggle('active', isYearly);
+
+      amounts.forEach(amt => {
+        const value = isYearly ? amt.getAttribute('data-yearly') : amt.getAttribute('data-monthly');
+        amt.style.opacity = '0';
+        setTimeout(() => {
+          amt.textContent = '₹' + Number(value).toLocaleString('en-IN');
+          amt.style.opacity = '1';
+        }, 150);
+      });
+
+      periods.forEach(p => { p.textContent = isYearly ? '/mo, billed yearly' : '/mo'; });
+    });
+  }
+
+
+  /* ===== FAQ ACCORDION ===== */
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      faqItems.forEach(i => i.classList.remove('active'));
+      if (!isActive) item.classList.add('active');
+    });
+  });
+
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>

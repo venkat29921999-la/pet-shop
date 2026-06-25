@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pawfetch — Pet Care &amp; Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="paw-progress"><i class="fa-solid fa-paw"></i></div>
+
+<!-- HEADER -->
+<header class="site-header" id="header">
+  <div class="container header-inner">
+    <div class="logo">
+        <a href="index.html">
+            <img src="Assest/stacklylogo (1).webp" alt="Logo">
+        </a>
+    </div>
+
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="plan.html">Plans</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="login.html" class="btn btn-small btn-primary nav-cta">Login</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-overlay" id="nav-overlay"></div>
+
+<main>
+
+  <!-- 1. HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg-shape"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy" data-animate="fade-up">
+        <span class="eyebrow"><i class="fa-solid fa-bone"></i> Trusted by 40,000+ pet parents</span>
+        <h1>Tails wag <em>happier</em> when care comes home.</h1>
+        <p>Premium food, grooming, vet checkups and toys — all curated by real pet specialists. One trusted shop for every chapter of your pet's life.</p>
+        <div class="hero-actions">
+          <a href="shop.html" class="btn btn-primary">
+            <i class="fa-solid fa-bag-shopping"></i> Shop the Store
+          </a>
+          <a href="service.html" class="btn btn-ghost">
+            <i class="fa-solid fa-circle-play"></i> Our Services
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>12k+</strong><span>Happy Pets</span></div>
+          <div class="stat"><strong>4.9<i class="fa-solid fa-star"></i></strong><span>Avg. Rating</span></div>
+          <div class="stat"><strong>24/7</strong><span>Vet Support</span></div>
+        </div>
+      </div>
+
+      <div class="hero-media" data-animate="fade-in">
+        <div class="hero-image-frame">
+          <img src="Assest/shop1.webp" alt="Happy golden retriever puppy">
+        </div>
+        <div class="floating-card card-top">
+          <i class="fa-solid fa-truck-fast"></i>
+          <div><strong>Free Delivery</strong><span>On orders above ₹999</span></div>
+        </div>
+        <div class="floating-card card-bottom">
+          <i class="fa-solid fa-shield-heart"></i>
+          <div><strong>Vet Approved</strong><span>100% safe products</span></div>
+        </div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+      </div>
+    </div>
+    <a href="#trust" class="scroll-cue" aria-label="Scroll down"><i class="fa-solid fa-chevron-down"></i></a>
+  </section>
+
+  <!-- 2. TRUST STRIP -->
+  <section class="trust-strip" id="trust">
+    <div class="container marquee-wrap">
+      <div class="marquee" data-animate="fade-up">
+        <div class="marquee-track">
+          <span><i class="fa-solid fa-leaf"></i> 100% Natural Ingredients</span>
+          <span><i class="fa-solid fa-truck"></i> Same-Day Delivery</span>
+          <span><i class="fa-solid fa-user-doctor"></i> Certified Vets</span>
+          <span><i class="fa-solid fa-scissors"></i> Pro Grooming</span>
+          <span><i class="fa-solid fa-medal"></i> Award-Winning Care</span>
+          <span><i class="fa-solid fa-recycle"></i> Eco Packaging</span>
+          <!-- duplicate for seamless loop -->
+          <span><i class="fa-solid fa-leaf"></i> 100% Natural Ingredients</span>
+          <span><i class="fa-solid fa-truck"></i> Same-Day Delivery</span>
+          <span><i class="fa-solid fa-user-doctor"></i> Certified Vets</span>
+          <span><i class="fa-solid fa-scissors"></i> Pro Grooming</span>
+          <span><i class="fa-solid fa-medal"></i> Award-Winning Care</span>
+          <span><i class="fa-solid fa-recycle"></i> Eco Packaging</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SHOP CATEGORIES -->
+  <section class="section categories" id="categories">
+    <div class="container">
+      <div class="section-head" data-animate="fade-up">
+        <span class="eyebrow"><i class="fa-solid fa-store"></i> Shop by Category</span>
+        <h2>Everything your pet could ask for</h2>
+        <p>Hand-picked essentials across food, comfort, play and grooming — for dogs, cats and everyone in between.</p>
+      </div>
+
+      <div class="category-grid">
+        <a href="#" class="cat-card large" data-animate="fade-up" data-delay="0">
+          <img src="Assest/shop2.webp" alt="Premium dog food bowl">
+          <div class="cat-overlay">
+            <i class="fa-solid fa-bowl-food"></i>
+            <h3>Food &amp; Treats</h3>
+            <span>240+ products</span>
+          </div>
+        </a>
+        <a href="#" class="cat-card" data-animate="fade-up" data-delay="100">
+          <img src="Assest/shop17.webp" alt="Pet toys">
+          <div class="cat-overlay">
+            <i class="fa-solid fa-baseball"></i>
+            <h3>Toys</h3>
+            <span>120+ products</span>
+          </div>
+        </a>
+        <a href="#" class="cat-card" data-animate="fade-up" data-delay="200">
+          <img src="Assest/shop3.webp" alt="Pet bed comfort">
+          <div class="cat-overlay">
+            <i class="fa-solid fa-bed"></i>
+            <h3>Comfort &amp; Bedding</h3>
+            <span>80+ products</span>
+          </div>
+        </a>
+        <a href="#" class="cat-card" data-animate="fade-up" data-delay="300">
+          <img src="Assest/shop18.webp" alt="Pet grooming kit">
+          <div class="cat-overlay">
+            <i class="fa-solid fa-pump-soap"></i>
+            <h3>Grooming</h3>
+            <span>95+ products</span>
+          </div>
+        </a>
+        <a href="#" class="cat-card" data-animate="fade-up" data-delay="400">
+          <img src="Assest/shop4.webp" alt="Cat accessories">
+          <div class="cat-overlay">
+            <i class="fa-solid fa-cat"></i>
+            <h3>Cat Corner</h3>
+            <span>150+ products</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. FEATURED PRODUCTS -->
+  <section class="section products" id="products">
+    <div class="container">
+      <div class="section-head split" data-animate="fade-up">
+        <div>
+          <span class="eyebrow"><i class="fa-solid fa-bag-shopping"></i> Best Sellers</span>
+          <h2>Loved by pets, picked by parents</h2>
+        </div>
+        <a href="shop.html" class="link-arrow">View all products <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card" data-animate="fade-up" data-delay="0">
+          <span class="badge">Best Seller</span>
+          <div class="product-img">
+            <img src="Assest/shop5.webp" alt="Grain-free dog kibble">
+          </div>
+          <div class="product-info">
+            <span class="cat-tag">Food</span>
+            <h3>Grain-Free Salmon Kibble</h3>
+            <div class="stars">★★★★★ <small>(312)</small></div>
+            <div class="price-row">
+              <span class="price">₹1,299</span>
+              <button class="icon-btn" aria-label="Add to cart"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-animate="fade-up" data-delay="100">
+          <span class="badge sale">-20%</span>
+          <div class="product-img">
+            <img src="Assest/shop6.webp" alt="Squeaky chew toy">
+          </div>
+          <div class="product-info">
+            <span class="cat-tag">Toys</span>
+            <h3>Squeaky Rope Bone</h3>
+            <div class="stars">★★★★★ <small>(198)</small></div>
+            <div class="price-row">
+              <span class="price">₹449 <s>₹560</s></span>
+              <button class="icon-btn" aria-label="Add to cart"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-animate="fade-up" data-delay="200">
+          <div class="product-img">
+            <img src="Assest/shop19.webp" alt="Cozy plush pet bed">
+          </div>
+          <div class="product-info">
+            <span class="cat-tag">Comfort</span>
+            <h3>Cloudsoft Plush Bed</h3>
+            <div class="stars">★★★★☆ <small>(264)</small></div>
+            <div class="price-row">
+              <span class="price">₹2,199</span>
+              <button class="icon-btn" aria-label="Add to cart"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-animate="fade-up" data-delay="300">
+          <span class="badge">New</span>
+          <div class="product-img">
+            <img src="Assest/shop7.webp" alt="Pet grooming brush set">
+          </div>
+          <div class="product-info">
+            <span class="cat-tag">Grooming</span>
+            <h3>Deshedding Brush Set</h3>
+            <div class="stars">★★★★★ <small>(141)</small></div>
+            <div class="price-row">
+              <span class="price">₹899</span>
+              <button class="icon-btn" aria-label="Add to cart"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SERVICES -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-head" data-animate="fade-up">
+        <span class="eyebrow"><i class="fa-solid fa-hand-holding-heart"></i> What We Do</span>
+        <h2>Care that goes beyond the cart</h2>
+        <p>Book hands-on services delivered by certified groomers and veterinarians, right when your pet needs them.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" data-animate="fade-up" data-delay="0">
+          <div class="service-icon"><i class="fa-solid fa-shower"></i></div>
+          <h3>Spa &amp; Grooming</h3>
+          <p>Bath, trim, nail care and de-shedding sessions tailored to your pet's coat and mood.</p>
+          <a href="service.html" class="link-arrow small">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-animate="fade-up" data-delay="100">
+          <div class="service-icon"><i class="fa-solid fa-stethoscope"></i></div>
+          <h3>Vet Consultations</h3>
+          <p>In-clinic or video consults with licensed veterinarians, available around the clock.</p>
+          <a href="service.html" class="link-arrow small">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-animate="fade-up" data-delay="200">
+          <div class="service-icon"><i class="fa-solid fa-house-chimney-medical"></i></div>
+          <h3>Pet Boarding</h3>
+          <p>A cozy, supervised home-away-from-home for your pet while you're travelling.</p>
+          <a href="service.html" class="link-arrow small">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-animate="fade-up" data-delay="300">
+          <div class="service-icon"><i class="fa-solid fa-syringe"></i></div>
+          <h3>Vaccination Drives</h3>
+          <p>Scheduled immunization reminders and at-home vaccination visits.</p>
+          <a href="service.html" class="link-arrow small">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-animate="fade-up" data-delay="400">
+          <div class="service-icon"><i class="fa-solid fa-dog"></i></div>
+          <h3>Dog Training</h3>
+          <p>Positive-reinforcement training programs for puppies, adults and rescues.</p>
+          <a href="service.html" class="link-arrow small">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-animate="fade-up" data-delay="500">
+          <div class="service-icon"><i class="fa-solid fa-van-shuttle"></i></div>
+          <h3>Pickup &amp; Drop</h3>
+          <p>Safe, comfortable rides to and from appointments — no carrier required.</p>
+          <a href="service.html" class="link-arrow small">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. WHY CHOOSE US -->
+  <section class="section why" id="why">
+    <div class="container why-inner">
+      <div class="why-media" data-animate="fade-in">
+        <img src="Assest/shop8.webp" alt="Veterinarian examining a cat" class="why-img-main">
+        <img src="Assest/shop9.webp" alt="Dog being groomed" class="why-img-float">
+        <div class="why-badge"><i class="fa-solid fa-award"></i><span>9 Years of<br>Trusted Care</span></div>
+      </div>
+
+      <div class="why-copy" data-animate="fade-up">
+        <span class="eyebrow"><i class="fa-solid fa-heart"></i> Why Pawfetch</span>
+        <h2>Because every pet deserves a second family</h2>
+        <p>We blend retail convenience with real clinical expertise — so the food you buy and the care you book come from the same place of trust.</p>
+
+        <div class="why-list">
+          <div class="why-item">
+            <i class="fa-solid fa-check"></i>
+            <div><strong>Certified Professionals</strong><span>Every groomer and vet is licensed and background-checked.</span></div>
+          </div>
+          <div class="why-item">
+            <i class="fa-solid fa-check"></i>
+            <div><strong>Quality-Tested Products</strong><span>Every item passes an in-house safety and nutrition review.</span></div>
+          </div>
+          <div class="why-item">
+            <i class="fa-solid fa-check"></i>
+            <div><strong>Transparent Pricing</strong><span>No hidden fees on services or subscriptions, ever.</span></div>
+          </div>
+        </div>
+
+        <div class="why-cta">
+          <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> Book a Free Checkup</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. GALLERY -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section-head" data-animate="fade-up">
+        <span class="eyebrow"><i class="fa-solid fa-images"></i> Happy Tails</span>
+        <h2>Moments from the Pawfetch community</h2>
+      </div>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" data-animate="fade-up" data-delay="0"><img src="Assest/shop19.webp" alt="Dog relaxing on a bed"></div>
+      <div class="gallery-item" data-animate="fade-up" data-delay="50"><img src="Assest/shop10.webp" alt="Cat playing"></div>
+      <div class="gallery-item" data-animate="fade-up" data-delay="100"><img src="Assest/shop3.webp" alt="Puppy in a basket"></div>
+      <div class="gallery-item" data-animate="fade-up" data-delay="150"><img src="Assest/shop11.webp" alt="Dog running outdoors"></div>
+      <div class="gallery-item" data-animate="fade-up" data-delay="200"><img src="Assest/shop12.webp" alt="Pet grooming session"></div>
+      <div class="gallery-item" data-animate="fade-up" data-delay="250"><img src="Assest/shop1.webp" alt="Smiling puppy portrait"></div>
+    </div>
+  </section>
+
+  <!-- 8. PRICING / PLANS -->
+  <section class="section plans" id="plans">
+    <div class="container">
+      <div class="section-head" data-animate="fade-up">
+        <span class="eyebrow"><i class="fa-solid fa-paw"></i> Membership Plans</span>
+        <h2>Care plans for every kind of pet parent</h2>
+        <p>Bundle products and services into one simple monthly plan — pause or cancel anytime.</p>
+      </div>
+
+      <div class="plans-grid">
+        <div class="plan-card" data-animate="fade-up" data-delay="0">
+          <h3>Starter</h3>
+          <div class="plan-price">₹499<span>/mo</span></div>
+          <p>For the casual pet parent just getting started.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> 10% off all products</li>
+            <li><i class="fa-solid fa-check"></i> Monthly grooming reminder</li>
+            <li><i class="fa-solid fa-check"></i> Email vet support</li>
+          </ul>
+          <a href="plan.html" class="btn btn-outline">Choose Plan</a>
+        </div>
+
+        <div class="plan-card featured" data-animate="fade-up" data-delay="100">
+          <span class="plan-tag">Most Popular</span>
+          <h3>Companion</h3>
+          <div class="plan-price">₹999<span>/mo</span></div>
+          <p>Balanced care for everyday pet households.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> 20% off all products</li>
+            <li><i class="fa-solid fa-check"></i> Free monthly grooming</li>
+            <li><i class="fa-solid fa-check"></i> Priority vet video calls</li>
+            <li><i class="fa-solid fa-check"></i> Free delivery, always</li>
+          </ul>
+          <a href="plan.html" class="btn btn-primary">Choose Plan</a>
+        </div>
+
+        <div class="plan-card" data-animate="fade-up" data-delay="200">
+          <h3>Family Pack</h3>
+          <div class="plan-price">₹1,799<span>/mo</span></div>
+          <p>For multi-pet homes that need it all.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> 30% off all products</li>
+            <li><i class="fa-solid fa-check"></i> 2 grooming sessions/mo</li>
+            <li><i class="fa-solid fa-check"></i> 24/7 vet hotline</li>
+            <li><i class="fa-solid fa-check"></i> Annual health checkup</li>
+          </ul>
+          <a href="plan.html" class="btn btn-outline">Choose Plan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. TESTIMONIALS -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-head center" data-animate="fade-up">
+        <span class="eyebrow"><i class="fa-solid fa-quote-left"></i> Loved by Parents</span>
+        <h2>Stories from our pack</h2>
+      </div>
+
+      <div class="testimonial-track" id="testimonial-track">
+        <div class="testimonial-card" data-animate="fade-up" data-delay="0">
+          <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p>"Pawfetch's grooming team is so gentle with my anxious rescue dog. The food subscription has also been a lifesaver for our schedule."</p>
+          <div class="testimonial-user">
+            <img src="Assest/shop14.webp" alt="Reviewer portrait">
+            <div><strong>Aditi Rao</strong><span>Dog mom to Simba</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-animate="fade-up" data-delay="100">
+          <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p>"The vet video consult caught an ear infection early. Fast, kind, and genuinely knowledgeable — exactly what I needed at 11pm."</p>
+          <div class="testimonial-user">
+            <img src="Assest/shop15.webp" alt="Reviewer portrait">
+            <div><strong>Rohit Mehta</strong><span>Cat dad to Mochi</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-animate="fade-up" data-delay="200">
+          <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p>"Switched to the Companion plan and never looked back. Delivery is always on time and the quality of toys is genuinely premium."</p>
+          <div class="testimonial-user">
+            <img src="Assest/shop16.webp" alt="Reviewer portrait">
+            <div><strong>Sneha Iyer</strong><span>Pet parent of two</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-dots" id="testimonial-dots"></div>
+    </div>
+  </section>
+
+  <!-- 10. CTA + CONTACT / NEWSLETTER -->
+  <section class="section cta-contact" id="contact">
+    <div class="container cta-inner" data-animate="fade-up">
+      <div class="cta-copy">
+        <span class="eyebrow light"><i class="fa-solid fa-paper-plane"></i> Stay in the loop</span>
+        <h2>Get tail-wagging deals &amp; care tips in your inbox</h2>
+        <p>Join 18,000+ pet parents getting first access to new arrivals, grooming slots, and seasonal care guides.</p>
+
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="you@example.com" required aria-label="Email address">
+         <button type="submit" class="btn btn-primary"><a href="contact.html">Subscribe</a> <i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+       <p class="form-note" id="form-note">No spam, unsubscribe anytime.</p>
+
+        <div class="contact-quick">
+          <i class="fa-solid fa-phone"></i> +91 12345 67890
+          <i class="fa-solid fa-envelope"></i> hello@pawfetch.com
+        </div>
+      </div>
+      <div class="cta-media">
+        <img src="Assest/shop13.webp" alt="Happy dog and owner">
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <a href="index.html">
+            <img src="Assest/stacklylogo (1).webp" alt="Logo">
+        </a>
+    </div>
+      <p>Premium pet shop and care services — food, grooming, vet support and more, all in one trusted place.</p>
+      <div class="social-row">
+        <a href="404.html?from=home"><i class="fa-brands fa-facebook-f"></i></a>
+<a href="404.html?from=home"><i class="fa-brands fa-instagram"></i></a>
+<a href="404.html?from=home"><i class="fa-brands fa-x-twitter"></i></a>
+<a href="404.html?from=home"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="shop.html">Dog Food</a></li>
+        <li><a href="shop.html">Cat Food</a></li>
+        <li><a href="shop.html">Toys</a></li>
+        <li><a href="shop.html">Grooming Tools</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="plan.html">Membership</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="contact.html">Shipping Info</a></li>
+        <li><a href="contact.html">Returns</a></li>
+        <li><a href="contact.html">FAQs</a></li>
+        <li><a href="contact.html">Track Order</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year"></span> Pawfetch. All rights reserved.</p>
+    <p>Made with <i class="fa-solid fa-heart"></i> for pets everywhere.</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dashboard — Pawfetch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dash-body">
+
+<div class="dash-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="dash-sidebar" id="dash-sidebar">
+    <a href="index.html" class="brand light">
+      <span class="brand-icon"><i class="fa-solid fa-paw"></i></span>
+      <span class="brand-name">Stackly</span>
+    </a>
+
+    <span class="sidebar-label">Main</span>
+    <nav class="dash-nav">
+      <a href="#overview" class="active"><i class="fa-solid fa-grip"></i> Overview</a>
+      <a href="#pets"><i class="fa-solid fa-paw"></i> My Pets</a>
+      <a href="#orders"><i class="fa-solid fa-bag-shopping"></i> My Orders</a>
+      <a href="#bookings"><i class="fa-solid fa-calendar-check"></i> My Bookings</a>
+      <a href="#membership"><i class="fa-solid fa-crown"></i> Membership</a>
+    </nav>
+
+    <span class="sidebar-label">Account</span>
+    <nav class="dash-nav">
+      <a href="404.html"><i class="fa-solid fa-gear"></i> Settings</a>
+      <a href="404.html"><i class="fa-solid fa-circle-question"></i> Help Center</a>
+    </nav>
+
+    <div class="sidebar-promo">
+      <i class="fa-solid fa-bone"></i>
+      <p>Refer a friend &amp;<br><strong>earn ₹200 credit</strong></p>
+    </div>
+
+    <a href="login.html" class="logout-link" id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+  </aside>
+
+  <div class="dash-overlay" id="dash-overlay"></div>
+
+  <!-- MAIN -->
+  <div class="dash-main">
+
+    <!-- TOPBAR -->
+    <header class="dash-topbar">
+      <button class="dash-menu-btn" id="dash-menu-btn" aria-label="Toggle sidebar"><i class="fa-solid fa-bars"></i></button>
+      <div class="dash-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search your orders, bookings...">
+      </div>
+      <div class="dash-topbar-actions">
+        <button class="dash-icon-btn"><i class="fa-solid fa-bell"></i><span class="dot"></span></button>
+        <button class="dash-icon-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+        <div class="dash-profile">
+          <img src="Assest/shop15.webp" alt="User avatar">
+          <div class="dash-profile-text">
+            <strong id="user-name">Demo User</strong>
+            <span>Companion Member</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="dash-content">
+
+      <!-- 1. WELCOME BANNER -->
+      <section id="overview" class="dash-section">
+        <div class="user-welcome-banner" data-animate="fade-up">
+          <div class="welcome-text">
+            <span class="eyebrow light"><i class="fa-solid fa-paw"></i> Good to see you</span>
+            <h1>Hey <span id="user-name-2">Demo User</span>, Simba says hi! 🐾</h1>
+            <p>You have 1 upcoming grooming session and 2 orders on the way.</p>
+            <a href="404.html?from=userdashboard" class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> Book a Service</a>
+          </div>
+          <img src="Assest/shop1.webp" alt="User's dog" class="welcome-pet-img">
+        </div>
+
+        <div class="stat-cards-grid">
+          <div class="dash-stat-card" data-animate="fade-up" data-delay="0">
+            <div class="dash-stat-icon icon-clay"><i class="fa-solid fa-bag-shopping"></i></div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-num" data-count="18">0</span>
+              <span class="dash-stat-label">Total Orders</span>
+            </div>
+          </div>
+          <div class="dash-stat-card" data-animate="fade-up" data-delay="100">
+            <div class="dash-stat-icon icon-forest"><i class="fa-solid fa-paw"></i></div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-num" data-count="2">0</span>
+              <span class="dash-stat-label">Pets Registered</span>
+            </div>
+          </div>
+          <div class="dash-stat-card" data-animate="fade-up" data-delay="200">
+            <div class="dash-stat-icon icon-gold"><i class="fa-solid fa-tags"></i></div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-num" data-count="3240" data-prefix="₹">0</span>
+              <span class="dash-stat-label">Total Saved</span>
+            </div>
+          </div>
+          <div class="dash-stat-card" data-animate="fade-up" data-delay="300">
+            <div class="dash-stat-icon icon-sage"><i class="fa-solid fa-calendar-check"></i></div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-num" data-count="1">0</span>
+              <span class="dash-stat-label">Upcoming Booking</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. MY PETS -->
+      <section id="pets" class="dash-section">
+        <div class="section-head split" data-animate="fade-up">
+          <h2 class="dash-h2"><i class="fa-solid fa-paw"></i> My Pets</h2>
+          <a href="404.html?from=userdashboard" class="btn btn-small btn-outline"><i class="fa-solid fa-plus"></i> Add Pet</a>
+        </div>
+        <div class="pet-grid">
+          <div class="pet-card" data-animate="fade-up" data-delay="0">
+            <img src="Assest/shop1.webp" alt="Simba">
+            <h4>Simba</h4>
+            <span>Labrador · 3 yrs</span>
+            <div class="pet-tags"><span><i class="fa-solid fa-syringe"></i> Vaccinated</span></div>
+          </div>
+          <div class="pet-card" data-animate="fade-up" data-delay="100">
+            <img src="Assest/shop4.webp" alt="Mochi">
+            <h4>Mochi</h4>
+            <span>Persian Cat · 1.5 yrs</span>
+            <div class="pet-tags"><span><i class="fa-solid fa-syringe"></i> Vaccinated</span></div>
+          </div>
+          <div class="pet-card add-pet-card" data-animate="fade-up" data-delay="200">
+            <i class="fa-solid fa-circle-plus"></i>
+            <span>Add a New Pet Profile</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. MY ORDERS -->
+      <section id="orders" class="dash-section">
+        <div class="dash-panel" data-animate="fade-up">
+          <div class="panel-head">
+            <h3><i class="fa-solid fa-bag-shopping"></i> My Orders</h3>
+            <a href="404.html?from=userdashboard" class="link-arrow small">Shop more <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="table-wrap">
+            <table class="dash-table">
+              <thead><tr><th>Order ID</th><th>Item</th><th>Date</th><th>Amount</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>#PF1042</td>
+                  <td><div class="cust-cell"><img src="Assest/shop5.webp" alt=""> Salmon Kibble x2</div></td>
+                  <td>22 Jun 2026</td><td>₹2,598</td>
+                  <td><span class="status delivered">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td>#PF1030</td>
+                  <td><div class="cust-cell"><img src="Assest/shop19.webp" alt=""> Plush Bed</div></td>
+                  <td>18 Jun 2026</td><td>₹2,199</td>
+                  <td><span class="status shipped">Shipped</span></td>
+                </tr>
+                <tr>
+                  <td>#PF1011</td>
+                  <td><div class="cust-cell"><img src="Assest/shop7.webp" alt=""> Grooming Kit</div></td>
+                  <td>05 Jun 2026</td><td>₹899</td>
+                  <td><span class="status pending">Processing</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. MY BOOKINGS -->
+      <section id="bookings" class="dash-section">
+        <div class="dash-panel" data-animate="fade-up">
+          <div class="panel-head">
+            <h3><i class="fa-solid fa-calendar-check"></i> My Upcoming Bookings</h3>
+            <a href="404.html?from=userdashboard" class="link-arrow small">Book new <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="booking-list">
+            <div class="booking-row">
+              <div class="booking-icon"><i class="fa-solid fa-shower"></i></div>
+              <div class="booking-info"><strong>Grooming — Simba</strong><span>Today, 4:30 PM at Chennai Store</span></div>
+              <span class="status shipped">Confirmed</span>
+            </div>
+            <div class="booking-row faded">
+              <div class="booking-icon"><i class="fa-solid fa-stethoscope"></i></div>
+              <div class="booking-info"><strong>Vet Consult — Mochi</strong><span>12 Jun 2026 · Completed</span></div>
+              <span class="status delivered">Completed</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. MEMBERSHIP STATUS -->
+      <section id="membership" class="dash-section">
+        <div class="membership-banner" data-animate="fade-up">
+          <div class="membership-info">
+            <span class="plan-tag">Companion Plan</span>
+            <h2>You're saving 20% on every order</h2>
+            <p>Your membership renews on <strong>15 July 2026</strong>. Includes free monthly grooming and priority vet calls.</p>
+            <div class="hero-actions">
+              <a href="404.html?from=userdashboard" class="btn btn-primary"><i class="fa-solid fa-crown"></i> Upgrade Plan</a>
+              <a href="404.html?from=userdashboard" class="btn btn-ghost light"><i class="fa-solid fa-table-list"></i> Compare Plans</a>
+            </div>
+          </div>
+          <div class="membership-progress">
+            <div class="progress-ring">
+              <svg viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="52" class="ring-bg"></circle>
+                <circle cx="60" cy="60" r="52" class="ring-fill" id="membership-ring"></circle>
+              </svg>
+              <div class="ring-label"><strong>62%</strong><span>perks used</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. CARE TIPS / RECOMMENDED -->
+      <section id="recommend" class="dash-section">
+        <div class="section-head" data-animate="fade-up">
+          <h2 class="dash-h2"><i class="fa-solid fa-lightbulb"></i> Recommended for Simba</h2>
+        </div>
+        <div class="manage-grid">
+          <div class="manage-card" data-animate="fade-up" data-delay="0">
+            <img src="Assest/shop7.webp" alt="Brush">
+            <div class="manage-info">
+              <h4>Deshedding Brush Set</h4>
+              <span>Recommended for short-coat breeds</span>
+              <div class="manage-actions">
+                <a href="404.html?from=userdashboard" class="btn btn-small btn-outline">View</a>
+              </div>
+            </div>
+          </div>
+          <div class="manage-card" data-animate="fade-up" data-delay="100">
+            <img src="Assest/shop5.webp" alt="Kibble">
+            <div class="manage-info">
+              <h4>Joint-Care Senior Kibble</h4>
+              <span>Great for ages 3+</span>
+              <div class="manage-actions">
+                <a href="404.html?from=userdashboard" class="btn btn-small btn-outline">View</a>
+              </div>
+            </div>
+          </div>
+          <div class="manage-card" data-animate="fade-up" data-delay="200">
+            <img src="Assest/shop8.webp" alt="Toy">
+            <div class="manage-info">
+              <h4>Treat Puzzle Feeder</h4>
+              <span>Mental stimulation toy</span>
+              <div class="manage-actions">
+                <a href="404.html?from=userdashboard" class="btn btn-small btn-outline">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

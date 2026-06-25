@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop — Pawfetch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="paw-progress"><i class="fa-solid fa-paw"></i></div>
+
+<!-- HEADER -->
+<header class="site-header" id="header">
+  <div class="container header-inner">
+   <div class="logo">
+        <a href="index.html">
+            <img src="Assest/stacklylogo (1).webp" alt="Logo">
+        </a>
+    </div>
+
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="plan.html">Plans</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <a href="login.html" class="btn btn-small btn-primary nav-cta">Login</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-overlay" id="nav-overlay"></div>
+
+<main>
+
+  <!-- 1. SHOP HERO / BANNER -->
+  <section class="shop-hero" id="shop-home">
+    <div class="container shop-hero-inner">
+      <div class="shop-hero-copy" data-animate="fade-up">
+        <span class="breadcrumb"><a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>Shop</span></span>
+        <h1>The <em>Pawfetch</em> Store</h1>
+        <p>Vet-approved food, toys, comfort and grooming essentials — hand-picked for every breed, age and personality.</p>
+        <div class="shop-hero-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search for food, toys, beds...">
+          <button class="btn btn-primary btn-small">Search</button>
+        </div>
+      </div>
+      <div class="shop-hero-media" data-animate="fade-in">
+        <div class="shop-hero-frame">
+          <img src="Assest/shop3.webp" alt="Shopping basket full of pet supplies">
+        </div>
+        <div class="floating-card card-top">
+          <i class="fa-solid fa-tags"></i>
+          <div><strong>Up to 30% Off</strong><span>This week only</span></div>
+        </div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. CATEGORY FILTER STRIP -->
+  <section class="section filter-section" id="shop-filters">
+    <div class="container">
+      <div class="filter-bar" data-animate="fade-up">
+        <div class="filter-tabs" id="filter-tabs">
+          <button class="filter-tab active" data-filter="all"><i class="fa-solid fa-border-all"></i> All</button>
+          <button class="filter-tab" data-filter="food"><i class="fa-solid fa-bowl-food"></i> Food</button>
+          <button class="filter-tab" data-filter="toys"><i class="fa-solid fa-baseball"></i> Toys</button>
+          <button class="filter-tab" data-filter="comfort"><i class="fa-solid fa-bed"></i> Comfort</button>
+          <button class="filter-tab" data-filter="grooming"><i class="fa-solid fa-pump-soap"></i> Grooming</button>
+          <button class="filter-tab" data-filter="cat"><i class="fa-solid fa-cat"></i> Cat Corner</button>
+        </div>
+        <div class="sort-box">
+          <i class="fa-solid fa-arrow-down-wide-short"></i>
+          <select id="sort-select" aria-label="Sort products">
+            <option>Sort: Popular</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Newest</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PRODUCTS GRID -->
+  <section class="section shop-products" id="shop-grid">
+    <div class="container">
+      <div class="product-grid" id="product-grid">
+
+        <article class="product-card" data-cat="food" data-animate="fade-up" data-delay="0">
+          <span class="badge">Best Seller</span>
+          <button class="wish-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-img"><img src="Assest/shop5.webp" alt="Grain-free dog kibble"></div>
+          <div class="product-info">
+            <span class="cat-tag">Food</span>
+            <h3>Grain-Free Salmon Kibble</h3>
+            <div class="stars">★★★★★ <small>(312)</small></div>
+            <div class="price-row">
+              <span class="price">₹1,299</span>
+              <button class="icon-btn" aria-label="Add to cart"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-cat="toys" data-animate="fade-up" data-delay="50">
+          <span class="badge sale">-20%</span>
+          <button class="wish-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-img"><img src="Assest/shop8.webp" alt="Squeaky chew toy"></div>
+          <div class="product-info">
+            <span class="cat-tag">Toys</span>
+            <h3>Squeaky Rope Bone</h3>
+            <div class="stars">★★★★★ <small>(198)</small></div>
+            <div class="price-row">
+              <span class="price">₹449 <s>₹560</s></span>
+              <button class="icon-btn" aria-label="Add to cart"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-cat="comfort" data-animate="fade-up" data-delay="100">
+          <button class="wish-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-img"><img src="Assest/shop19.webp" alt="Cozy plush pet bed"></div>
+          <div class="product-info">
+            <span class="cat-tag">Comfort</span>
+            <h3>Cloudsoft Plush Bed</h3>
+            <div class="stars">★★★★☆ <small>(264)</small></div>
+            <div class="price-row">
+              <span class="price">₹2,199</span>
+              <button class="icon-btn" aria-label="Add to cart"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-cat="grooming" data-animate="fade-up" data-delay="150">
+          <span class="badge">New</span>
+          <button class="wish-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-img"><img src="Assest/shop7.webp" alt="Pet grooming brush set"></div>
+          <div class="product-info">
+            <span class="cat-tag">Grooming</span>
+            <h3>Deshedding Brush Set</h3>
+            <div class="stars">★★★★★ <small>(141)</small></div>
+            <div class="price-row">
+              <span class="price">₹899</span>
+              <button class="icon-btn" aria-label="Add to cart"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-cat="cat" data-animate="fade-up" data-delay="200">
+          <button class="wish-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-img"><img src="Assest/shop4.webp" alt="Cat scratching post"></div>
+          <div class="product-info">
+            <span class="cat-tag">Cat Corner</span>
+            <h3>Sisal Scratching Tower</h3>
+            <div class="stars">★★★★☆ <small>(176)</small></div>
+            <div class="price-row">
+              <span class="price">₹1,649</span>
+              <button class="icon-btn" aria-label="Add to cart"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-cat="food" data-animate="fade-up" data-delay="250">
+          <button class="wish-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-img"><img src="Assest/shop2.webp" alt="Wet food cans for dogs">
+          </div>
+          <div class="product-info">
+            <span class="cat-tag">Food</span>
+            <h3>Slow-Cooked Chicken Stew</h3>
+            <div class="stars">★★★★★ <small>(229)</small></div>
+            <div class="price-row">
+              <span class="price">₹329</span>
+              <button class="icon-btn" aria-label="Add to cart"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-cat="toys" data-animate="fade-up" data-delay="300">
+          <span class="badge sale">-15%</span>
+          <button class="wish-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-img"><img src="Assest/shop20.webp" alt="Interactive puzzle toy"></div>
+          <div class="product-info">
+            <span class="cat-tag">Toys</span>
+            <h3>Treat Puzzle Feeder</h3>
+            <div class="stars">★★★★☆ <small>(133)</small></div>
+            <div class="price-row">
+              <span class="price">₹699 <s>₹820</s></span>
+              <button class="icon-btn" aria-label="Add to cart"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-cat="grooming" data-animate="fade-up" data-delay="350">
+          <button class="wish-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-img"><img src="Assest/shop21.webp" alt="Pet shampoo bottle"></div>
+          <div class="product-info">
+            <span class="cat-tag">Grooming</span>
+            <h3>Oatmeal Soothing Shampoo</h3>
+            <div class="stars">★★★★★ <small>(208)</small></div>
+            <div class="price-row">
+              <span class="price">₹549</span>
+              <button class="icon-btn" aria-label="Add to cart"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="load-more-wrap" data-animate="fade-up">
+        <button class="btn btn-outline" id="load-more"><i class="fa-solid fa-rotate"></i> Load More Products</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. DEAL OF THE DAY -->
+  <section class="section deal-section" id="deal-of-day">
+    <div class="container deal-inner" data-animate="fade-up">
+      <div class="deal-media">
+        <img src="Assest/shop1.webp" alt="Puppy with discount offer">
+        <div class="deal-ribbon"><i class="fa-solid fa-bolt"></i> Deal of the Day</div>
+      </div>
+      <div class="deal-copy">
+        <span class="eyebrow"><i class="fa-solid fa-clock"></i> Limited Time Offer</span>
+        <h2>Premium Salmon Kibble — flat 35% off</h2>
+        <p>Our top-rated grain-free formula, packed with omega-rich salmon for a shinier coat and happier tummy. Stock won't last at this price.</p>
+
+        <div class="countdown" id="countdown">
+          <div class="cd-box"><span id="cd-hours">08</span><small>Hours</small></div>
+          <div class="cd-box"><span id="cd-mins">42</span><small>Mins</small></div>
+          <div class="cd-box"><span id="cd-secs">19</span><small>Secs</small></div>
+        </div>
+
+        <div class="deal-price-row">
+          <span class="deal-price">₹844</span>
+          <span class="deal-old">₹1,299</span>
+          <a href="plan.html" class="btn btn-primary"><i class="fa-solid fa-cart-plus"></i> Grab the Deal</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. BRAND PARTNERS -->
+  <section class="section brands-section" id="shop-brands">
+    <div class="container">
+      <div class="section-head center" data-animate="fade-up">
+        <span class="eyebrow"><i class="fa-solid fa-handshake"></i> Trusted Partners</span>
+        <h2>Brands we proudly stock</h2>
+      </div>
+      <div class="brands-grid" data-animate="fade-up">
+        <div class="brand-chip"><i class="fa-solid fa-bone"></i><span>NutriPaws</span></div>
+        <div class="brand-chip"><i class="fa-solid fa-paw"></i><span>FurryFeast</span></div>
+        <div class="brand-chip"><i class="fa-solid fa-shield-dog"></i><span>VetCore</span></div>
+        <div class="brand-chip"><i class="fa-solid fa-leaf"></i><span>GreenTail</span></div>
+        <div class="brand-chip"><i class="fa-solid fa-cat"></i><span>WhiskerWell</span></div>
+        <div class="brand-chip"><i class="fa-solid fa-star"></i><span>PrimePet</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. SHOP CTA / NEWSLETTER -->
+  <section class="section cta-contact" id="shop-cta">
+    <div class="container cta-inner" data-animate="fade-up">
+      <div class="cta-copy">
+        <span class="eyebrow light"><i class="fa-solid fa-gift"></i> First Order Offer</span>
+        <h2>Get 15% off your first Pawfetch order</h2>
+        <p>Sign up and we'll send a welcome code straight to your inbox — plus early access to every restock and sale.</p>
+
+        <form class="newsletter-form" id="shop-newsletter-form">
+          <input type="email" placeholder="you@example.com" required aria-label="Email address">
+          <button type="submit" class="btn btn-primary"><a href="contact.html">Get My Code </a><i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+        <p class="form-note" id="shop-form-note">No spam, unsubscribe anytime.</p>
+      </div>
+      <div class="cta-media">
+        <img src="Assest/shop13.webp" alt="Happy dog with shopping bags">
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <a href="shop.html">
+            <img src="Assest/stacklylogo (1).webp" alt="Logo">
+        </a>
+    </div>
+      <p>Premium pet shop and care services — food, grooming, vet support and more, all in one trusted place.</p>
+      <div class="social-row">
+        <a href="404.html?from=home"><i class="fa-brands fa-facebook-f"></i></a>
+<a href="404.html?from=home"><i class="fa-brands fa-instagram"></i></a>
+<a href="404.html?from=home"><i class="fa-brands fa-x-twitter"></i></a>
+<a href="404.html?from=home"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="shop.html">Dog Food</a></li>
+        <li><a href="shop.html">Cat Food</a></li>
+        <li><a href="shop.html">Toys</a></li>
+        <li><a href="shop.html">Grooming Tools</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="plan.html">Membership</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="contact.html">Shipping Info</a></li>
+        <li><a href="contact.html">Returns</a></li>
+        <li><a href="contact.html">FAQs</a></li>
+        <li><a href="contact.html">Track Order</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year"></span> Pawfetch. All rights reserved.</p>
+    <p>Made with <i class="fa-solid fa-heart"></i> for pets everywhere.</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script >
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  /* ===== CATEGORY FILTER TABS ===== */
+  const tabs = document.querySelectorAll('.filter-tab');
+  const products = document.querySelectorAll('#product-grid .product-card');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filter = tab.getAttribute('data-filter');
+
+      products.forEach(card => {
+        const match = filter === 'all' || card.getAttribute('data-cat') === filter;
+        if (match) {
+          card.classList.remove('hide');
+          card.classList.remove('in-view');
+          requestAnimationFrame(() => card.classList.add('in-view'));
+        } else {
+          card.classList.add('hide');
+        }
+      });
+    });
+  });
+
+  /* ===== SORT (visual only demo) ===== */
+  const sortSelect = document.getElementById('sort-select');
+  const grid = document.getElementById('product-grid');
+  if (sortSelect && grid) {
+    sortSelect.addEventListener('change', () => {
+      const cards = Array.from(grid.children);
+      const getPrice = (card) => {
+        const priceText = card.querySelector('.price')?.textContent || '0';
+        return parseInt(priceText.replace(/[^\d]/g, '')) || 0;
+      };
+      if (sortSelect.value.includes('Low to High')) {
+        cards.sort((a, b) => getPrice(a) - getPrice(b));
+      } else if (sortSelect.value.includes('High to Low')) {
+        cards.sort((a, b) => getPrice(b) - getPrice(a));
+      }
+      cards.forEach(card => grid.appendChild(card));
+    });
+  }
+
+  /* ===== WISHLIST TOGGLE ===== */
+  document.querySelectorAll('.wish-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const icon = btn.querySelector('i');
+      icon.classList.toggle('fa-regular');
+      icon.classList.toggle('fa-solid');
+    });
+  });
+
+  /* ===== LOAD MORE (demo: just hides button + shows note) ===== */
+  const loadMoreBtn = document.getElementById('load-more');
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      loadMoreBtn.innerHTML = '<i class="fa-solid fa-circle-check"></i> All Products Loaded';
+      loadMoreBtn.disabled = true;
+      loadMoreBtn.style.opacity = '0.6';
+      loadMoreBtn.style.cursor = 'default';
+    });
+  }
+
+  /* ===== COUNTDOWN TIMER ===== */
+  const hoursEl = document.getElementById('cd-hours');
+  const minsEl = document.getElementById('cd-mins');
+  const secsEl = document.getElementById('cd-secs');
+
+  if (hoursEl && minsEl && secsEl) {
+    let totalSeconds = (8 * 3600) + (42 * 60) + 19;
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    function tick() {
+      if (totalSeconds <= 0) { totalSeconds = 12 * 3600; }
+      totalSeconds--;
+      const h = Math.floor(totalSeconds / 3600);
+      const m = Math.floor((totalSeconds % 3600) / 60);
+      const s = totalSeconds % 60;
+      hoursEl.textContent = pad(h);
+      minsEl.textContent = pad(m);
+      secsEl.textContent = pad(s);
+    }
+    setInterval(tick, 1000);
+  }
+
+  /* ===== SHOP NEWSLETTER FORM ===== */
+  const shopForm = document.getElementById('shop-newsletter-form');
+  const shopNote = document.getElementById('shop-form-note');
+  if (shopForm) {
+    shopForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const input = shopForm.querySelector('input[type="email"]');
+      if (input && input.value) {
+        shopNote.textContent = "Code sent! Check your inbox. 🐾";
+        shopNote.style.color = '#E8B95C';
+        input.value = '';
+      }
+    });
+  }
+
+});
+
+</script>
+<script src="script.js"></script>
+</body>
+</html>

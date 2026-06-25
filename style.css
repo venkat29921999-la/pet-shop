@@ -93,12 +93,18 @@ p{margin:0;line-height:1.6;}
 .btn-outline:hover{border-color:var(--clay);color:var(--clay-dark);transform:translateY(-2px);}
 
 /* ============ HEADER ============ */
+.logo{display:flex;align-items:center;height: 40px;}
 .logo img{
-    width:140px;
-    height:70px;
-    object-fit:contain;
-    filter: brightness(0);
+height: 90px;
+  max-width:220px;
+  width:auto;
+  object-fit:contain;
+  transition:transform .35s var(--ease);
+  /* Recolors the logo toward the brand forest green (#1F3A2E) so it's visible on the cream background */
+  filter:brightness(0) saturate(100%) invert(14%) sepia(43%) saturate(1196%) hue-rotate(108deg) brightness(94%) contrast(94%);
 }
+.logo a{display:inline-flex;align-items:center;}
+.logo:hover img{transform:scale(1.06);}
 
 .site-header{
   position:fixed;top:0;left:0;right:0;
@@ -112,7 +118,7 @@ p{margin:0;line-height:1.6;}
   padding:12px 0;
   box-shadow:0 8px 30px -16px rgba(31,58,46,0.25);
 }
-.header-inner{display:flex;align-items:center;justify-content:space-between;}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;}
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:1.4rem;color:var(--forest);}
 .brand-icon{
   display:inline-flex;align-items:center;justify-content:center;
@@ -120,8 +126,9 @@ p{margin:0;line-height:1.6;}
   background:var(--forest);color:var(--gold);
   font-size:1rem;
 }
-.main-nav{display:flex;align-items:center;gap:28px;}
-.main-nav ul{display:flex;gap:26px;}
+/* Nav links centered in the available space between logo and the login button/hamburger */
+.main-nav{display:flex;align-items:center;gap:28px;flex:1;}
+.main-nav ul{display:flex;gap:26px;flex:1;justify-content:center;}
 .main-nav a{
   font-weight:600;font-size:.95rem;color:var(--charcoal);
   position:relative;padding-bottom:4px;
@@ -467,6 +474,15 @@ p{margin:0;line-height:1.6;}
 .cta-media img{border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);width:100%;aspect-ratio:4/3.4;object-fit:cover;}
 
 /* ============ FOOTER ============ */
+
+.logo1 img{
+    width:140px;
+    height:90px;
+    object-fit:contain;
+    filter: brightness(0);
+}
+
+
 .site-footer{background:#172A20;color:rgba(251,247,240,0.8);padding:80px 0 0;}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,0.08);}
 .footer-brand .brand{color:var(--cream);margin-bottom:14px;}
@@ -500,10 +516,16 @@ p{margin:0;line-height:1.6;}
 .back-to-top:hover{background:var(--clay);}
 
 /* ============ SCROLL ANIMATIONS ============ */
-[data-animate]{opacity:0;transition:opacity .8s var(--ease), transform .8s var(--ease);}
-[data-animate="fade-up"]{transform:translateY(36px);}
-[data-animate="fade-in"]{transform:scale(.96);}
-[data-animate].in-view{opacity:1;transform:none;}
+/* Pure CSS animation -- plays automatically on page load.
+   Does NOT depend on JavaScript running, so content can never get stuck invisible. */
+[data-animate]{
+  opacity:0;
+  animation:revealFadeUp .8s var(--ease) forwards;
+}
+[data-animate="fade-in"]{animation-name:revealFadeIn;}
+[data-animate].in-view{opacity:1 !important;transform:none !important;animation:none !important;}
+@keyframes revealFadeUp{from{opacity:0;transform:translateY(36px);}to{opacity:1;transform:none;}}
+@keyframes revealFadeIn{from{opacity:0;transform:scale(.96);}to{opacity:1;transform:none;}}
 
 /* ============ RESPONSIVE ============ */
 @media (max-width:1080px){
@@ -1650,8 +1672,7 @@ p{margin:0;line-height:1.6;}
 .ring-label span{font-size:.7rem;opacity:.7;}
 
 /* ===== SCROLL REVEAL FOR DASH ===== */
-.dash-content [data-animate]{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease), transform .7s var(--ease);}
-.dash-content [data-animate].in-view{opacity:1;transform:none;}
+/* dashboard reveal now uses the global [data-animate] pure-CSS animation above */
 
 /* ===== RESPONSIVE: DASHBOARDS ===== */
 @media (max-width:1200px){
